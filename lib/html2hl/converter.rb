@@ -1,10 +1,10 @@
-require 'nokogiri'
+require 'oga'
 
 module Html2hl
   class Converter
     def initialize(input)
       @input  = input
-      @body   = Nokogiri::HTML(@input.to_s).css('body').first
+      @body   = Oga.parse_html @input.to_s
       @lines  = []
       @parsed = false
     end
@@ -61,7 +61,7 @@ module Html2hl
       str = ''
 
       str << ('  ' * level) if level > 0
-      str << inspect_str(node.content)
+      str << inspect_str(node.text)
 
       str
     end
@@ -91,7 +91,7 @@ module Html2hl
     def parse_attrs(node)
       return '()' if node.attributes.empty?
 
-      content = node.attributes.values.map do |attr|
+      content = node.attributes.map do |attr|
         inspect_hash_entry attr.name, attr.value
       end.join(', ')
 
@@ -99,7 +99,7 @@ module Html2hl
     end
 
     def parse_content(node)
-      content = node.content.to_s.strip
+      content = node.text.to_s.strip
       return '' if content.empty?
 
       " { #{inspect_str(content)} }"
@@ -122,11 +122,11 @@ module Html2hl
     end
 
     def text?(node)
-      node.is_a? Nokogiri::XML::Text
+      node.is_a? Oga::XML::Text
     end
 
     def skippable?(node)
-      return true if node.is_a? Nokogiri::XML::Comment
+      return true if node.is_a? Oga::XML::Comment
       return true if empty_text?(node)
 
       false
@@ -135,14 +135,14 @@ module Html2hl
     def empty_text?(node)
       return false unless text?(node)
 
-      content = node.content.dup.delete("\n").delete("\t").strip
+      content = node.text.dup.delete("\n").delete("\t").strip
       content.empty?
     end
 
     def children?(node)
       size = node.children.size
       return false if size.zero?
-      return false if size == 1 && node.children.first.is_a?(Nokogiri::XML::Text)
+      return false if size == 1 && text?(node.children.first)
 
       true
     end

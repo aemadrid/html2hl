@@ -33,7 +33,7 @@ def pfh(*names)
 end
 
 def hn(html, nr = 0)
-  Nokogiri::HTML(html).css('body').children[nr]
+  Oga.parse_html(html).children[nr]
 end
 
 def hnh(*names)
