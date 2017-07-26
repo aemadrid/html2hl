@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require_relative '../lib/html2hl'
+require_relative '../spec/support/helpers'
+require 'yaml'
+require 'json'
+
+qty     = (ARGV[0] || '100').to_i
+pattern = ARGV[1] || 'all'
+count   = 0
+ran     = []
+
+files = Dir.glob('spec/files/**/*.html').sort
+
+puts '-' * 120
+puts "qty     : #{qty}"
+puts "pattern : #{pattern}"
+puts "files   : (#{files.size}) #{files.to_yaml}"
+puts '-' * 120
+
+start_time = Time.now
+files.each do |path|
+  if pattern == 'all' || path.index(pattern)
+    ran << path
+    html = File.read path
+    qty.times do
+      count += 1
+      Html2hl::Converter.new(html.dup).to_hl
+    end
+  end
+end
+end_time  = Time.now
+took_time = end_time - start_time
+
+hsh = {
+  ran:     ran,
+  start:   start_time,
+  end:     end_time,
+  took:    took_time,
+  count:   count,
+  average: (took_time / count.to_f),
+  rps:    (count / took_time),
+}
+puts JSON.pretty_generate(hsh)
+
+
