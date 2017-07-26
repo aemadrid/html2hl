@@ -4,7 +4,6 @@ require 'bundler/setup'
 require_relative '../lib/html2hl'
 require_relative '../spec/support/helpers'
 require 'yaml'
-require 'json'
 
 qty     = (ARGV[0] || '100').to_i
 pattern = ARGV[1] || 'all'
@@ -12,12 +11,6 @@ count   = 0
 ran     = []
 
 files = Dir.glob('spec/files/**/*.html').sort
-
-puts '-' * 120
-puts "qty     : #{qty}"
-puts "pattern : #{pattern}"
-puts "files   : (#{files.size}) #{files.to_yaml}"
-puts '-' * 120
 
 start_time = Time.now
 files.each do |path|
@@ -42,6 +35,6 @@ hsh = {
   average: (took_time / count.to_f),
   rps:    (count / took_time),
 }
-puts JSON.pretty_generate(hsh)
+puts hsh.to_yaml
 
 
