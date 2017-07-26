@@ -1,4 +1,4 @@
-# Html2hl
+# Html2hl  [![Build Status](https://travis-ci.org/aemadrid/html2hl.svg?branch=master)](https://travis-ci.org/aemadrid/html2hl)
 
 Converts an HTML file into Ruby code ready to use in a [HyperLoop](http://ruby-hyperloop.io) project.
 
