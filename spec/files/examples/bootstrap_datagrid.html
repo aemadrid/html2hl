@@ -1,0 +1,251 @@
+<div id="demo_grid1" class="grid_container">
+  <div id="tools_demo_grid1" class="tools">
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Columns"><span
+        class="glyphicon glyphicon-th"></span><span class="caret"></span></button>
+      <ul id="columns_list_demo_grid1" class="dropdown-menu dropdown-menu-right ui-sortable">
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox"> Code</label></a>
+        </li>
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox"
+                                                                              checked=""> Lastname</label></a></li>
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox"
+                                                                              checked=""> Firstname</label></a></li>
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox">
+          Email</label></a></li>
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox"
+                                                                              checked=""> Gender</label></a></li>
+        <li><a href="javascript:void(0);"><label class="columns-label"><input type="checkbox" class="col-checkbox"
+                                                                              checked=""> Date updated</label></a></li>
+        <li class="not-sortable divider"></li>
+        <li class="not-sortable columns-li-padding"><label class="columns-label"><input type="checkbox"
+                                                                                        class="col-checkbox">&nbsp;Row
+          numbers</label></li>
+        <li class="not-sortable divider"></li>
+        <li class="not-sortable columns-li-padding">
+          <button class="btn btn-primary btn-xs btn-block">Default</button>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Sorting"><span
+        class="glyphicon glyphicon-sort"></span><span class="caret"></span></button>
+      <ul id="sorting_list_demo_grid1" class="dropdown-menu dropdown-menu-right ui-sortable">
+        <li><a href="javascript:void(0);"><label class="radio-inline"><input type="radio"
+                                                                             name="sort_radio_demo_grid1_0"><i
+          class="glyphicon glyphicon-chevron-up"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input type="radio"
+                                                                                                            name="sort_radio_demo_grid1_0"><i
+          class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input
+          type="radio" name="sort_radio_demo_grid1_0" checked=""><i
+          class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;</label><span class="sorting-name">Code</span></a></li>
+        <li><a href="javascript:void(0);"><label class="radio-inline"><input type="radio" name="sort_radio_demo_grid1_1"
+                                                                             checked=""><i
+          class="glyphicon glyphicon-chevron-up"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input type="radio"
+                                                                                                            name="sort_radio_demo_grid1_1"><i
+          class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input
+          type="radio" name="sort_radio_demo_grid1_1"><i class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;</label><span
+          class="sorting-name">Lastname</span></a></li>
+        <li><a href="javascript:void(0);"><label class="radio-inline"><input type="radio" name="sort_radio_demo_grid1_2"
+                                                                             checked=""><i
+          class="glyphicon glyphicon-chevron-up"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input type="radio"
+                                                                                                            name="sort_radio_demo_grid1_2"><i
+          class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input
+          type="radio" name="sort_radio_demo_grid1_2"><i class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;</label><span
+          class="sorting-name">Firstname</span></a></li>
+        <li><a href="javascript:void(0);"><label class="radio-inline"><input type="radio"
+                                                                             name="sort_radio_demo_grid1_3"><i
+          class="glyphicon glyphicon-chevron-up"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input type="radio"
+                                                                                                            name="sort_radio_demo_grid1_3"><i
+          class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;</label><label class="radio-inline"><input
+          type="radio" name="sort_radio_demo_grid1_3" checked=""><i
+          class="glyphicon glyphicon-minus"></i>&nbsp;&nbsp;</label><span class="sorting-name">Date updated</span></a>
+        </li>
+        <li class="not-sortable divider"></li>
+        <li class="not-sortable columns-li-padding">
+          <button class="btn btn-primary btn-xs btn-block">Default</button>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Select"><span
+        class="glyphicon  glyphicon-check"></span><span id="selected_rows_demo_grid1"
+                                                        class="selected-rows">0</span><span class="caret"></span>
+      </button>
+      <ul id="selection_list_demo_grid1" class="dropdown-menu dropdown-menu-right">
+        <li><a href="javascript:void(0);">Deselect all</a></li>
+      </ul>
+    </div>
+    <button id="filter_toggle_demo_grid1" class="btn btn-default pull-right" title="Filters"><span
+      class="glyphicon glyphicon-filter"></span></button>
+  </div>
+  <div id="tbl_container_demo_grid1" class="table-responsive">
+    <table id="tbl_demo_grid1" class="table table-bordered table-hover">
+      <thead>
+      <tr id="tbl_demo_grid1_tr_0">
+        <th class="th-common">Lastname&nbsp;<span class="glyphicon glyphicon-chevron-up text-muted"></span></th>
+        <th class="th-common">Firstname&nbsp;<span class="glyphicon glyphicon-chevron-up text-muted"></span></th>
+        <th class="th-common">Gender</th>
+        <th class="th-common">Date updated</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr id="tbl_demo_grid1_tr_85">
+        <td><a href="/test/85" rel="nofollow">Albert</a></td>
+        <td>Sean</td>
+        <td>male</td>
+        <td>03/07/2007 10:01:51</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_49">
+        <td><a href="/test/49" rel="nofollow">Allison</a></td>
+        <td>Trevor</td>
+        <td>male</td>
+        <td>19/12/2008 17:53:43</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_152">
+        <td><a href="/test/152" rel="nofollow">Andrews</a></td>
+        <td>Rhea</td>
+        <td>female</td>
+        <td>16/03/1991 04:53:13</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_53">
+        <td><a href="/test/53" rel="nofollow">Atkins</a></td>
+        <td>Lawrence</td>
+        <td>male</td>
+        <td>25/07/1995 09:14:37</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_41">
+        <td><a href="/test/41" rel="nofollow">Austin</a></td>
+        <td>Harper</td>
+        <td>male</td>
+        <td>30/12/2008 22:35:55</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_3">
+        <td><a href="/test/3" rel="nofollow">Bailey</a></td>
+        <td>Benjamin</td>
+        <td>male</td>
+        <td>17/06/2012 03:17:19</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_19">
+        <td><a href="/test/19" rel="nofollow">Barker</a></td>
+        <td>Uriel</td>
+        <td>male</td>
+        <td>30/06/1999 09:48:11</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_172">
+        <td><a href="/test/172" rel="nofollow">Barr</a></td>
+        <td>Kelly</td>
+        <td>female</td>
+        <td>23/12/2013 03:35:01</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_131">
+        <td><a href="/test/131" rel="nofollow">Bates</a></td>
+        <td>Uta</td>
+        <td>female</td>
+        <td>27/08/1998 00:58:49</td>
+      </tr>
+      <tr id="tbl_demo_grid1_tr_65">
+        <td><a href="/test/65" rel="nofollow">Bean</a></td>
+        <td>Nash</td>
+        <td>male</td>
+        <td>31/05/1992 20:54:57</td>
+      </tr>
+      </tbody>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div id="no_res_demo_grid1" class="alert alert-warning no-records-found" style="display: none;">No records found</div>
+  <div id="pag_demo_grid1" class="well pagination-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="">
+          <ul id="nav_list_pag_demo_grid1" class="pagination pagination_custom" unselectable="on"
+              style="user-select: none;">
+            <li class="active"><a id="nav_item_pag_demo_grid1_1" href="javascript:void(0);" title="Page 1 of 20">1</a>
+            </li>
+            <li><a id="nav_item_pag_demo_grid1_2" href="javascript:void(0);">2</a></li>
+            <li><a id="nav_item_pag_demo_grid1_3" href="javascript:void(0);">3</a></li>
+            <li><a id="nav_item_pag_demo_grid1_4" href="javascript:void(0);">4</a></li>
+            <li><a id="nav_item_pag_demo_grid1_5" href="javascript:void(0);">5</a></li>
+            <li><a id="next_pag_demo_grid1" href="javascript:void(0);">→</a></li>
+            <li><a id="last_pag_demo_grid1" href="javascript:void(0);">»</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-2 row-space">
+        <div class="input-group"><span class="input-group-addon" title="Go to page"><i
+          class="glyphicon glyphicon-arrow-right"></i></span><input id="goto_page_pag_demo_grid1" type="text"
+                                                                    class="form-control small-input" title="Go to page">
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-2 row-space">
+        <div class="input-group"><span class="input-group-addon" title="Rows per page"><i
+          class="glyphicon glyphicon-th-list"></i></span><input id="rows_per_page_pag_demo_grid1" value="10" type="text"
+                                                                class="form-control small-input" title="Rows per page">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-2 row-space">
+        <div id="rows_info_pag_demo_grid1" class="">1-10 of 200 records (p.1/20)</div>
+      </div>
+    </div>
+  </div>
+  <div id="flt_container_demo_grid1" class="well filters-container" style="display: none;">
+    <div id="flt_rules_demo_grid1" class="filter_rules_container">
+      <dl id="group_flt_rules_demo_grid1_1" class="rules_group_container">
+        <dt class="rules_group_header">
+        <div class="rules_group_condition_container"><select id="group_cond_flt_rules_demo_grid1_1"
+                                                             class="form-control input-sm rules_group_condition_list">
+          <option value="AND">all rules:</option>
+          <option value="OR">any rule:</option>
+        </select></div>
+        <div class="rules_group_tools_container"><select id="group_tools_flt_rules_demo_grid1_0"
+                                                         class="form-control input-sm rules_group_tools_list">
+          <option value="please_select">»</option>
+          <optgroup label="rule">
+            <option value="rule_insert_before" disabled="disabled">insert before</option>
+            <option value="rule_insert_after" disabled="disabled">insert after</option>
+            <option value="rule_insert_inside">insert inside</option>
+          </optgroup>
+          <optgroup label="group">
+            <option value="group_insert_before" disabled="disabled">insert before</option>
+            <option value="group_insert_after" disabled="disabled">insert after</option>
+            <option value="group_insert_inside">insert inside</option>
+            <option value="group_delete" disabled="disabled">delete</option>
+          </optgroup>
+        </select></div>
+        </dt>
+        <dd class="rules_group_body">
+          <ul class="rules_list">
+            <li id="rule_flt_rules_demo_grid1_1" class="rules_list_li">
+              <div class="filter_container"><select id="filters_list_flt_rules_demo_grid1_1"
+                                                    class="form-control input-sm filter_list">
+                <option value="no_filter">» select</option>
+                <option value="Lastname">Last name</option>
+                <option value="Gender">Gender</option>
+                <option value="DateUpdated">Datetime updated</option>
+              </select></div>
+              <div id="oper_wrap_flt_rules_demo_grid1_1" class="operators_list_container"></div>
+              <div id="flt_wrap_flt_rules_demo_grid1_1" class="filter_value_container"></div>
+              <div class="rule_tools_container"><select id="rule_tools_flt_rules_demo_grid1_1"
+                                                        class="form-control input-sm rule_tools_list">
+                <option value="please_select">»</option>
+                <optgroup label="rule">
+                  <option value="rule_insert_before">insert before</option>
+                  <option value="rule_insert_after">insert after</option>
+                  <option value="rule_clear">clear</option>
+                  <option value="rule_delete">delete</option>
+                </optgroup>
+                <optgroup label="group">
+                  <option value="group_insert_before">insert before</option>
+                  <option value="group_insert_after">insert after</option>
+                </optgroup>
+              </select></div>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <div id="flt_tools_demo_grid1" class="">
+      <button class="btn btn-primary btn-sm filters-button">Apply</button>
+      <button class="btn btn-default btn-sm filters-button">Reset</button>
+    </div>
+  </div>
+</div>

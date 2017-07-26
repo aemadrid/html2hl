@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/html2hl'
+
+Html2hl::CLI.run ARGV

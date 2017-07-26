@@ -1,0 +1,109 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - assets/**/*
+    - coverage/**/*
+    - scrap/**/*
+    - spec/files/**/*
+
+Metrics/BlockNesting:
+  Max: 2
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 125
+
+Metrics/PerceivedComplexity:
+  Max: 8
+
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+Metrics/LineLength:
+  AllowURI: true
+  Max: 120
+  Exclude:
+    - db/**/*.rb
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 22
+  Exclude:
+    - db/**/*.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - db/**/*.rb
+    - spec/**/*.rb
+
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 120
+  Exclude:
+    - db/**/*.rb
+    - spec/**/*.rb
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/CollectionMethods:
+  PreferredMethods:
+    collect:  'map'
+    reduce:   'inject'
+    find:     'detect'
+    find_all: 'select'
+
+Style/Documentation:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+Style/Lambda:
+  Enabled: false
+
+Layout/SpaceAroundOperators:
+  AllowForAlignment: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/TrivialAccessors:
+  Enabled: false
+
+Layout/AlignHash:
+  EnforcedColonStyle: key
+
+Style/MethodMissing:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/AccessorMethodName:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false

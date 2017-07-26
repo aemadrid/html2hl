@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require_relative '../lib/html2hl'
+require_relative '../spec/support/helpers'
+
+require 'irb'
+IRB.start(__FILE__)
